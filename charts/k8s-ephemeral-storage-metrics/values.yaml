@@ -1,3 +1,7 @@
 image: registry.lab.com/k8s-ephemeral-storage-metrics
 log_level: info
 deploy_type: DaemonSet
+deploy_annotations:
+  source: "https://github.com/Ray-Barker/k8s-ephemeral-storage-metrics"
+metrics_port: 9101
+scrape_interval: 10
