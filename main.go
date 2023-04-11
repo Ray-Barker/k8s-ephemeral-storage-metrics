@@ -9,8 +9,8 @@ import (
 	"os"
 	"path/filepath"
 	"runtime"
-	"time"
 	"strconv"
+	"time"
 
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
@@ -96,7 +96,7 @@ func getMetrics() {
 
 	log.Debug().Msg(fmt.Sprintf("getMetrics has been invoked"))
 	currentNode = getEnv("CURRENT_NODE_NAME", "")
-    scrapeEnv = getEnv("SCRAPE_INTERVAL", "15")
+	scrapeEnv = getEnv("SCRAPE_INTERVAL", "15")
 	scrapeInterval, _ = strconv.Atoi(scrapeEnv)
 
 	for {
